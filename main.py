@@ -1,9 +1,11 @@
+from game import is_valid_direction
+
 choice = ""
 move = 0
 move_limit = 3
 while choice != "quit":
     choice = input("direction (north/south/quit): ").lower().strip()
-    if choice in ["north", "south"]:
+    if is_valid_direction(choice):
         move = move + 1
         print(f"Move so far: {move}")
         moves_left = move_limit - move
