@@ -35,7 +35,7 @@
 
 # student = {"name": "Ada", "age": 12}
 # print(student.get("grade"))
-# # print(student["grade"])
+# print(student["grade"])
 
 
 # def add_item(bag):
@@ -46,11 +46,12 @@
 # print(my_bag)
 
 items =  ["map"]
-items.append("rope")
+if "rope" not in items:
+    items.append("rope")
 if "rope" not in items:
     items.append("rope")
 print(len(items))
-if items in items:
-    items.remove("rope")
+if "lantern" in items:
+    items.remove("lantern")
 print(items)
 print(len(items))
